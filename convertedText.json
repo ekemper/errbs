@@ -1,0 +1,96 @@
+{
+  "name": "Uva Ursi- Arctostaphylos uva-ursis",
+  "family": "Ericaceae",
+  "commonNames": [
+    "Bearberry",
+    "Bear Grape",
+    "Pinemat",
+    "Hogberry",
+    "Rockberry",
+    "Chipmunk’s Apples",
+    "Mealberry",
+    "Mountain Cranberry",
+    "Sanberry"
+  ],
+  "partsUsed": "leaf",
+  "formsAndDosages": [
+    {
+      "type": "Tincture",
+      "concentration": "1:5",
+      "percentage": "50%",
+      "dosage": "30-60 drops in water 3x/day"
+    },
+    {
+      "type": "Infusion",
+      "concentration": "1:30",
+      "dosage": "3-4 oz. 3x/day"
+    },
+    {
+      "type": "Topical",
+      "uses": [
+        "Infusion can be diluted and used as a sitz bath",
+        "Use as poultice",
+        "Use as fomentation",
+        "Use as tea",
+        "Use as acetum extract"
+      ]
+    }
+  ],
+  "vitalistActionsAndEnergetics": [
+    "cold",
+    "dry",
+    "stimulant",
+    "tonic/astringent"
+  ],
+  "clinicalActions": [
+    "antiseptic",
+    "astringent",
+    "anti-inflammatory",
+    "urinary tract antiseptic",
+    "tonic/astringent (to gut and pelvic tissues)",
+    "fungistatic",
+    "antibacterial"
+  ],
+  "affinities": [
+    "urinary tract",
+    "digestive system"
+  ],
+  "primaryUses": {
+    "tonifying": "to all pelvic organs",
+    "disinfectant": "for cystitis",
+    "urinaryFlow": "increases flow of urine",
+    "antibacterialActions": "against Staphylococcus, Pseudomonas, Proteus, and E. Coli bacterias"
+  },
+  "constituents": [
+    "Arbutin",
+    "tannins",
+    "ursolic acid",
+    "hydroquinone-glycosides",
+    "phenol glycosides",
+    "flavonoids",
+    "triterpenes",
+    "phenolic acids",
+    "bitter principles"
+  ],
+  "cautions": {
+    "extendedUse": "can be irritating/stressful for kidneys",
+    "avoidWith": [
+      "active kidney disease",
+      "use during pregnancy",
+      "use during lactation"
+    ],
+    "potentialAdverseEffects": [
+      "can potentially act as an emmenagogue and/or disrupt blood flow to fetus",
+      "hydroquinone (as an isolated substance) was used in skin whitening creams and was banned by the FDA after being shown to be carcinogenic in rat studies",
+      "one case of carcinogenicity has been reported in a 56-year-old woman who took Uva ursi as a simple for 3 years straight",
+      "whole plant extracts have been found to be generally safe in moderate doses for up to 4 weeks",
+      "avoid larger doses of fresh leaves"
+    ]
+  },
+  "resources": [
+    "Arctostaphylos uva ursi,” pg. 12 in Herbal Actions Database",
+    "“Uva Ursi,” pg. 10-11 in Urinary System Therapeutics and Materia Medica; CSCH Class Notes (2023)",
+    "Sinadinos, Christa: “Uva Ursi and Manzanita,” pg. 504-507 in The Essential Guide to Western Botanical Medicine",
+    "Skenderi, Gazmend: “Uva-Ursi” pg. 383 in Herbal Vade Mecum"
+  ]
+}
