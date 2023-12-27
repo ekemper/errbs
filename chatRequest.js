@@ -12,5 +12,4 @@ async function chatCall(content) {
   return completion.choices[0]
 }
 
-
 module.exports = {chatCall}

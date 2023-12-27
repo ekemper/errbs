@@ -1,39 +1,53 @@
-// import chatCall from "./chatRequest.js";
-const { join } = require("path");
 const { chatCall } = require("./chatRequest.js");
-const { writeFileSync, readdirSync } = require('fs');
+const { writeFileSync, readdirSync, readFileSync } = require('fs');
+const keys = require('./schema.js')
 
 const dir = './herbTexts/';
 
-readdirSync(dir).forEach(file => {
-    // console.log(file);
-    fs.readFile(file, 'utf8', (err, data) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        convert(data);
-      });
-});
+const docs = []
 
-function convert() {
+const convert = async text => {
 
-   
+    const promptAsk =`
+        using the following keys : ${keys.join(',')} ,
 
+        please convert the following document into json : ${text}
+    `
 
-    chatCall(`please convert the following document into json : ${text}`).then((resp) => {
+    try {
+        const resp = await chatCall(promptAsk)
 
-        // console.log({resp})
-
-        const path = './convertedText.json';
-
-        const jsonMessage = resp.message.content
+        let doc
         try {
-            writeFileSync(path, jsonMessage, 'utf8');
-            console.log('Data successfully saved to disk');
-        } catch (error) {
-            console.log('An error has occurred ', error);
+            doc = JSON.parse(resp.message.content)
+        } catch (parseError) {
+            console.log({responseContent: resp.message.content})
+            throw new Error( 'error parsing json :')
         }
-    })
+        
+        docs.push(doc)
+        console.log(`success`);
+    } catch (error) {
+        console.log('An error has occurred ', error);
+    }
 }
 
+const getJsonFromTxtFile =  async file => {
+    try {
+        const text = readFileSync(`${dir}${file}`, 'utf8')
+        await convert(text)
+    } catch (err) {
+        console.error(err);
+        return;
+    }
+}
+
+(async function () {
+    const files = readdirSync(dir)
+
+    await Promise.all(files.map(async (file) => {
+        await getJsonFromTxtFile(file)
+    }));
+    
+    writeFileSync('./converted.json', JSON.stringify(docs))
+})()
