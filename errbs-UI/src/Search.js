@@ -1,22 +1,28 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import Grid from '@mui/material/Grid';
 import SearchResults from './SearchResults'
 import TextField from '@mui/material/TextField';
 
-const  Search = () => {
+const Search = () => {
     const [nameSearchKeyword, setNameSearchKeyWord] = useState('')
     return (
         <>
-            <TextField 
-                label="Search By Name" 
-                variant="outlined" 
-                type="text" 
-                id="search_by_name" 
-                className='searchInput'
-                value={nameSearchKeyword} 
-                onChange={(e) => setNameSearchKeyWord(e.target.value)}/>
+            <Grid container spacing={2}>
+                <Grid item xs={4}>
+                    <TextField
+                        label="Search By Name"
+                        variant="outlined"
+                        type="text"
+                        id="search_by_name"
+                        className='searchInput'
+                        value={nameSearchKeyword}
+                        onChange={(e) => setNameSearchKeyWord(e.target.value)} />
 
-            <SearchResults keyWord={nameSearchKeyword}/>
-
+                </Grid>
+                <Grid item xs={8}>
+                    <SearchResults keyWord={nameSearchKeyword} />
+                </Grid>
+            </Grid>
         </>
     )
 }
