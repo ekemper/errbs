@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Grid from '@mui/material/Grid';
 import SearchResults from './SearchResults'
+import SearchByAction from './SearchByAction';
 import TextField from '@mui/material/TextField';
 
 const Search = () => {
@@ -17,6 +18,8 @@ const Search = () => {
                         className='searchInput'
                         value={nameSearchKeyword}
                         onChange={(e) => setNameSearchKeyWord(e.target.value)} />
+
+                    <SearchByAction/>    
 
                 </Grid>
                 <Grid item xs={8}>
